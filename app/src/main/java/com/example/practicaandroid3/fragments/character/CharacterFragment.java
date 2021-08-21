@@ -7,6 +7,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
@@ -14,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.practicaandroid3.OnItemClickListener;
+import com.example.practicaandroid3.R;
 import com.example.practicaandroid3.databinding.FragmentCharacterBinding;
 import com.example.practicaandroid3.databinding.FragmentDetailCharacterBinding;
 import com.example.practicaandroid3.fragments.character.adapter.CharacterAdapter;
@@ -54,11 +57,10 @@ public class CharacterFragment extends Fragment {
     private void setupRecycler() {
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.recyclerView.setAdapter(characterAdapter);
-        characterAdapter.setOnItemClickListener(new OnItemClickListener() {
-            @Override
-            public void onClickItem(int position) {
+        characterAdapter.setOnItemClickListener(position -> {
+            Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(CharacterFragmentDirections
+            .actionCharacterFragmentToDetailCharacterFragment().setPosition(position));
 
-            }
         });
     }
     private void setupRequest() {

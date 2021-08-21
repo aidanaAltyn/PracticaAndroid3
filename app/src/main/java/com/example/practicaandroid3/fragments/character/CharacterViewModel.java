@@ -28,5 +28,22 @@ public class CharacterViewModel extends ViewModel {
         });
         return data;
     }
+    MutableLiveData<CharacterM> dataID = new MutableLiveData<>();
+    public MutableLiveData<CharacterM> fetchId(int id){
+        App.characterApiService.fetchCharacterId(id).enqueue(new Callback<CharacterM>() {
+            @Override
+            public void onResponse(Call<CharacterM> call, Response<CharacterM> response) {
+                dataID.setValue(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<CharacterM> call, Throwable t) {
+                dataID.setValue(null);
+            }
+        });
+        return dataID;
+    }
+
+
 
 }

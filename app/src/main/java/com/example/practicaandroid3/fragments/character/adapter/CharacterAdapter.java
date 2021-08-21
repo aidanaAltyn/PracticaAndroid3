@@ -54,7 +54,7 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.View
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    onItemClickListener.onClickItem(getAdapterPosition());
+                    onItemClickListener.onClickItem(characterM.getId());
                 }
             });
         }
