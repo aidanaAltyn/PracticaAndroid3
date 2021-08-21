@@ -50,10 +50,10 @@ public class CharacterFragment extends Fragment {
         setupRequest();
     }
 
-
     private void initilithation() {
         viewModel = new ViewModelProvider(requireActivity()).get(CharacterViewModel.class);
     }
+
     private void setupRecycler() {
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.recyclerView.setAdapter(characterAdapter);

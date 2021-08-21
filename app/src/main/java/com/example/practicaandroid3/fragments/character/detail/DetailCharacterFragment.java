@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
 import com.example.practicaandroid3.R;
 import com.example.practicaandroid3.databinding.FragmentDetailCharacterBinding;
 import com.example.practicaandroid3.fragments.character.CharacterFragment;
@@ -34,15 +35,12 @@ public class DetailCharacterFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initialization();
         setupArgs();
         setupRequest();
     }
-
-
-
 
     private void initialization() {
         viewModel = new ViewModelProvider(requireActivity()).get(CharacterViewModel.class);
@@ -52,8 +50,11 @@ public class DetailCharacterFragment extends Fragment {
     }
     private void setupRequest() {
         viewModel.fetchId(id).observe(getViewLifecycleOwner(), characterM -> {
-
-
+            Glide.with(binding.imageCharacter).load(characterM.getImage()).into(binding.imageCharacter);
+            binding.textCharacter.setText(characterM.getName());
+            binding.desk.setText(characterM.getStatus());
+            binding.text.setText(characterM.getGender());
+            binding.log.setText(characterM.getCreated());
         });
     }
 }
