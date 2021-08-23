@@ -23,13 +23,11 @@ import com.example.practicaandroid3.models.CharacterM;
 public class DetailCharacterFragment extends Fragment {
     private FragmentDetailCharacterBinding binding;
     private CharacterViewModel viewModel;
-    private DetailCharacterFragmentArgs args;
     private int id;
 
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView( LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
         binding = FragmentDetailCharacterBinding.inflate(inflater,container,false);
         return binding.getRoot();
     }

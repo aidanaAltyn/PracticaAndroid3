@@ -44,6 +44,4 @@ public class CharacterViewModel extends ViewModel {
         return dataID;
     }
 
-
-
 }

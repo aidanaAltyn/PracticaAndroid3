@@ -9,8 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
     private OkHttpClient okHttpClient = new OkHttpClient()
-            .newBuilder()
-            .addInterceptor(providerLoggingInterceptor())
+            .newBuilder().addInterceptor(providerLoggingInterceptor())
             .connectTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30,TimeUnit.SECONDS)
             .readTimeout(30,TimeUnit.SECONDS)

@@ -24,4 +24,14 @@
             app:argType="integer"
             android:defaultValue="-1" />
     </fragment>
+    <fragment
+        android:id="@+id/episodeFragment"
+        android:name="com.example.practicaandroid3.fragments.episode.EpisodeFragment"
+        android:label="fragment_episode"
+        tools:layout="@layout/fragment_episode" />
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.practicaandroid3.fragments.location.LocationFragment"
+        android:label="fragment_lokation2"
+        tools:layout="@layout/fragment_lokation2" />
 </navigation>

@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Dell/AndroidStudioProjects/PracticaAndroid3/app/src/main/res/layout/activity_main.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/PracticaAndroid3/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/PracticaAndroid3/app/src/main/res/layout/fragment_character.xml" value="0.20989583333333334" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/PracticaAndroid3/app/src/main/res/layout/fragment_detail_character.xml" value="0.20989583333333334" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/PracticaAndroid3/app/src/main/res/layout/fragment_episode.xml" value="0.20989583333333334" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/PracticaAndroid3/app/src/main/res/layout/fragment_lokation.xml" value="0.20989583333333334" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/PracticaAndroid3/app/src/main/res/layout/fragment_lokation2.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/PracticaAndroid3/app/src/main/res/layout/item_charecter.xml" value="0.20989583333333334" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/PracticaAndroid3/app/src/main/res/menu/menu_item.xml" value="0.20989583333333334" />
       </map>
     </option>
   </component>
