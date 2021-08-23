@@ -55,9 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         transaction.replace(R.id.nav_host_fragment, new EpisodeFragment()).commit();
                         return true;
                 }
-
                 return false;
-
             }
         });
 
